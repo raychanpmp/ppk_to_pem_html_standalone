@@ -44,6 +44,3 @@ This tool is designed for strict data isolation. It functions entirely within th
 * **Architecture:** Standalone HTML/JavaScript application.
 * **Dependencies:** pure-JavaScript implementation (client-side only).
 
----
-
-## License
