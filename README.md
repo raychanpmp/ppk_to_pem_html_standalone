@@ -1,22 +1,49 @@
-# ppk_to_pem_html_standalone
-PuTTY to OpenSSH Key Converter 
+# PuTTY to OpenSSH Key Converter (Client-Side)
 
-Convert your PuTTY (.ppk) keys to OpenSSH PEM format locally in your browser. 
+A secure, browser-based utility designed to convert PuTTY Private Key (`.ppk`) files into OpenSSH PEM format.
 
-All processing happens locally in your browser. Your keys are never sent to any remote server.
+This tool is designed for strict data isolation. It functions entirely within the web browser, ensuring sensitive cryptographic material is never transmitted over a network.
 
-How to Use This Converter
+---
 
-Choose one of two input methods:
+## Security & Privacy
 
-Option A: Copy and paste your .ppk file content into the text area
+> **Critical Note:** All processing occurs locally within your browser instance. Your private keys, passphrases, and file contents are **never** uploaded to, stored on, or processed by any remote server.
 
-Option B: Upload your .ppk file directly
+* **Zero Transmission:** The conversion logic runs via client-side JavaScript.
+* **Audit-Ready:** The code is contained in a standalone HTML file, allowing for easy code review and security auditing.
+* **No Persistence:** Data is cleared from memory once the browser tab is refreshed or closed.
 
-If your key is passphrase-protected, enter the passphrase
+---
 
-Click "Convert to OpenSSH Keys"
+## Key Features
 
-Download your converted keys using the download buttons
+* **Format Conversion:** Converts standard `.ppk` files to OpenSSH PEM format compatible with Linux/Unix environments and AWS.
+* **Dual Input Methods:** Supports direct text pasting or file uploading for flexibility.
+* **Encryption Support:** Full support for passphrase-protected keys.
+* **Instant Download:** Generates downloadable key files immediately upon conversion.
 
-Note: All processing happens locally in your browser. Your keys are never sent to any server.
+---
+
+## Usage Instructions
+
+1.  **Select Input Method:**
+    * **Option A:** Copy the content of your `.ppk` file and paste it into the provided text area.
+    * **Option B:** Click "Upload" to select the `.ppk` file from your local machine.
+2.  **Authenticate (If Required):**
+    * If your key is encrypted, enter the passphrase in the designated field.
+3.  **Convert:**
+    * Click the **"Convert to OpenSSH Keys"** button.
+4.  **Retrieve:**
+    * Use the download buttons to save your new OpenSSH key to your local secure storage.
+
+---
+
+## Technical Details
+
+* **Architecture:** Standalone HTML/JavaScript application.
+* **Dependencies:** pure-JavaScript implementation (client-side only).
+
+---
+
+## License
